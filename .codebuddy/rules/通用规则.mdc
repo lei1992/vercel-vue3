@@ -1,0 +1,19 @@
+---
+description: 
+alwaysApply: true
+enabled: true
+updatedAt: 2026-02-28T03:10:36.305Z
+provider: 
+---
+
+1. 代码规范：
+   - 遵循 Vue 官方风格指南，组件命名使用 PascalCase，变量使用 camelCase。
+   - 样式使用 scoped 隔离，优先用 Tailwind CSS，无 Tailwind 时用 SCSS 且变量统一放在 /styles/variables.scss。
+   - 代码注释仅保留关键逻辑，避免冗余，注释语言为中文。
+2. 布局要求：
+   - 所有元素使用弹性布局，禁止使用绝对定位（特殊场景除外）。
+3. 功能要求：
+   - 生成的组件包含基础 props 定义，无硬编码内容。
+   - 交互逻辑仅保留基础骨架，不包含业务接口调用。
+4. 输出格式：
+   - 完整输出 .vue 文件代码，无需额外说明。

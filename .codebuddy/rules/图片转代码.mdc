@@ -1,0 +1,9 @@
+---
+description: 
+alwaysApply: false
+enabled: true
+updatedAt: 2026-02-28T03:14:54.754Z
+provider: 
+---
+
+根据上传的图片转换成前端代码，使用的技术栈：vue3+ts+setup语法糖
