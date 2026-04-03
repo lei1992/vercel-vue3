@@ -11,8 +11,7 @@
     "format": "prettier --write .",
     "stylelint": "stylelint \"**/*.{css,scss,vue}\" --fix",
     "commit": "git-cz",
-    "prepare": "husky install",
-    "install": "npm install"
+    "prepare": "husky install"
   },
   "config": {
     "commitizen": {
