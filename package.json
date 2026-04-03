@@ -12,7 +12,7 @@
     "stylelint": "stylelint \"**/*.{css,scss,vue}\" --fix",
     "commit": "git-cz",
     "prepare": "husky install",
-    "install": "npm install --legacy-peer-deps"
+    "install": "npm install"
   },
   "config": {
     "commitizen": {
