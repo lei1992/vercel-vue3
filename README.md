@@ -59,3 +59,22 @@ Vercel只会读取你主动导入的仓库,不会访问其他私有仓库
 
 5. 点击"Deploy"按钮,等待Vercel构建并部署你的项目。构建完成后,你将看到你的项目在Vercel上的URL。
  ![alt text](image-5.png)
+
+6. 构建失败：
+  打开你的 package.json，删除这一行："install": "npm install"
+  Vercel 后台配置（加速安装）：
+    进入你的 Vercel 项目 → Settings → General → Build & Development Settings
+    按下面填写：
+      Framework Preset: Vite
+      Build Command: npm run build
+      Output Directory: dist
+      Install Command: npm install --ignore-scripts
+      Development Command: ✅ vite --port $PORT
+      ![alt text](image-6.png)
+    点击右下角的 Save 保存，提交代码，然后重新部署（Redeploy），这次应该能顺利完成了！
+    
+    --ignore-scripts：这是提速的关键。它会跳过 package.json 中所有的 preinstall/install 脚本（比如 husky install 和递归调用），直接安装包文件，安装速度能快一倍以上。
+    开启 Override：因为之前的 package.json 里有危险的 "install": "npm install"，必须强制覆盖 Vercel 默认的安装行为，否则还是会卡死。
+
+    ![alt text](image-7.png) 直接在浏览器地址栏输入 Domains 中的域名 就能访问到你的项目了，注意：Vercel 免费版没有国内节点，国内访问超时是普遍现象，需翻墙访问。
+   
